@@ -1,33 +1,124 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #212528;
+  color: white;
+  position: relative;
+  z-index: -1;
   pointer-events: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  width: 30vw
+}
+li{
+  list-style-type: none;
+  padding-right: 4vh;
+}
+
+.button-container {
+  background-color: #212528;
+  float: right;
+}
+.hidden-button {
+  background-color: #fed037;
+  height: 4vh;
+  width: 7vh;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  z-index: 5;
+  float: right;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+  display: none;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay{
+  background-color: rbga(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+.background-img{
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+  position: relative;
+  z-index: -1;
+  background-size: cover;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
 }
 
-.App-link {
-  color: #61dafb;
+.welcome{
+  font-size: 6vh;
+  margin-bottom: 5px;
+  font-style: italic;
+  font-family: "droid-serif";
+  position: relative;
+  z-index: 2;
+  color: white
 }
+.call{
+  font-size: 9vh;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
+  color: white
+}
+.call-button{
+  height: 8vh;
+  width: 25vw;
+  background-color: #fed037;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.menu{
+  margin-right: 25vh;
+}
+.hidden-menu{
+  display: flex;
+  background-color: #212528;
+  flex-direction: column;
+  color: white;
+  height: 30vh;
+  width: 100vh
+}
+@media(max-width: 1000px){
+  .menu{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .intro{
+    display: block;
+    justify-content: center;
+    margin-left: 8vh;
+    font-size: 10px;
+  }
+  .hidden-button{
+    display: flex;
+    flex-direction: column;
   }
 }
